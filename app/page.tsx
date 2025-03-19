@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     const fetchUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
-      setUser(user);
+      setUser(user); SetStateAction<null>;
       if (user) {
         fetchPastTasks(user.id);
         fetchCategories();
